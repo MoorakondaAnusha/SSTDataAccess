@@ -79,7 +79,7 @@ namespace SSTDataAccess
         /// Metadata associated with the answer, useful to categorize or filter question answers
         /// </summary>
         [JsonProperty("metadata")]
-        public object Metadata { get; set; }
+        public Metadata Metadata { get; set; }
 
         /// <summary>
         /// Context of a QnA
@@ -168,14 +168,22 @@ namespace SSTDataAccess
         /// <summary>
         /// Metadata Key
         /// </summary>
-        [JsonProperty("name")]
-        public string Key { get; set; }
+        //[JsonProperty("name")]
+        public string region { get; set; }
+        public string system_metadata_qna_edited_manually { get; set; }
+        public string zipcode { get; set; }
+        public string servicearea { get; set; }
+        
+        public string city { get; set; }
+        public string agegroup { get; set; }
+        public string facility { get; set; }
 
-        /// <summary>
-        /// Metadata Value
-        /// </summary>
-        [JsonProperty("value")]
-        public string Value { get; set; }
+
+        ///// <summary>
+        ///// Metadata Value
+        ///// </summary>
+        ////[JsonProperty("value")]
+        //public string[] value { get; set; }
 
         #endregion
     }

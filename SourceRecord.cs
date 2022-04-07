@@ -57,6 +57,12 @@ namespace SSTDataAccess
     public class Source : SourceQnABase
     {
         /// <summary>
+        /// Friendly name of the Source
+        /// </summary>
+        [JsonProperty("displayName")]
+        public string DisplayName { get; set; }
+
+        /// <summary>
         /// URI location for the file or url
         /// </summary>
         [JsonProperty("sourceUri")]
@@ -67,12 +73,6 @@ namespace SSTDataAccess
         /// </summary>
         [JsonProperty("sourceKind")]
         public string SourceKind { get; set; }
-
-        /// <summary>
-        /// Friendly name of the Source
-        /// </summary>
-        [JsonProperty("displayName")]
-        public string DisplayName { get; set; }
 
         /// <summary>
         /// Content structure type for sources(refer "SourceContentStructureKind" class for the same)
